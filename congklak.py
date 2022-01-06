@@ -5,9 +5,19 @@ def initGame():
     pool = [7,7,7,7,7,7,7,7,7,7,7,7,7,7]
     base = [0,0]
 
-def b():
-    global pool
-    pool1 = 2
+def playGame():
+    
+    status = checkGameStat()
+    playerNum = 2
+
+    while status == 0:
+
+        if playerNum == 2:
+            playerNum = 1
+        elif playerNum == 1:
+            playerNum = 2
+
+        print("It is player " + playerNum + "'s turn")
 
 def checkGameStat():
     
